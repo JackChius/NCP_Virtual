@@ -27,21 +27,28 @@ public class Main {
         JFrame frame = new JFrame();
         frame.add(p);
         // 添加功能面板
-        JPanel conPanel = new JPanel();
-        conPanel.setBackground( new Color(0, 0, 0, 210) );
-        JButton xButton = new JButton("低人流量");
-        conPanel.add(xButton);
-        xButton.addActionListener(event ->
-                Constants.u = -0.99f   );
+        SliderPanel cp = new SliderPanel();
+        cp.setBackground( new Color(0, 0, 0, 210) );
+        frame.add(cp, BorderLayout.EAST);
+//        JPanel conPanel = new JPanel();
+//        conPanel.setLayout(new GridLayout(8,8));
+//        conPanel.setBackground( new Color(0, 0, 0, 210) );
+//        JButton xButton = new JButton("低人流量");
+//        conPanel.add(xButton);
+//        xButton.addActionListener(event ->
+//                Constants.u = -0.99f   );
+//
+//        JButton xhgButton = new JButton("高人流量");
+//        conPanel.add(xhgButton);
+//        xhgButton.addActionListener(event ->
+//                Constants.u = 0.99f   );
+//
+//        JSlider receiveTimeBtn = new JSlider(1,100);
+//        conPanel.add(receiveTimeBtn);
+//
+//        frame.add(conPanel, BorderLayout.EAST);
 
-        JButton xhgButton = new JButton("高人流量");
-        conPanel.add(xhgButton);
-        xhgButton.addActionListener(event ->
-                Constants.u = 0.99f   );
-
-        frame.add(conPanel, BorderLayout.EAST);
-
-        frame.setSize(Constants.CITY_WIDTH + hospitalWidth + 398, Constants.CITY_HEIGHT);
+        frame.setSize(Constants.CITY_WIDTH + hospitalWidth + 505, Constants.CITY_HEIGHT);
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
         frame.setTitle("瘟疫传播模拟");

@@ -20,31 +20,22 @@ public class MyPanel extends JPanel implements Runnable {
         super();
         this.setBackground(new Color(0x000000));
 //        this.setLayout(new GridLayout(4,4));
-        JButton lowButton = new JButton("低人流量");
-        this.add(lowButton);
-        lowButton.addActionListener(event ->
-                Constants.u = -0.99f   );
-        JButton hgButton = new JButton("高人流量");
-        this.add(hgButton);
-        hgButton.addActionListener(event ->
-                Constants.u = 0.99f   );
-//        makeButton("浅色背景", new Color(0x454494) );
-//        makeButton("深色背景", new Color(0x000000) );
 
-        JButton stopButton = new JButton("暂停世界");
-        this.add(stopButton);
-        stopButton.addActionListener(event ->
-                Constants.isStop = true  );
+        JButton resetButton = new JButton("重置世界");
+        this.add(resetButton);
+        resetButton.addActionListener(event ->
+                PersonPool.getInstance().cleanPeople()  );
 
         JButton reButton = new JButton("恢复运转");
         this.add(reButton);
         reButton.addActionListener(event ->
                 Constants.isStop = false  );
 
-        JButton resetButton = new JButton("重置世界");
-        this.add(resetButton);
-        resetButton.addActionListener(event ->
-                PersonPool.getInstance().cleanPeople()  );
+        JButton stopButton = new JButton("暂停世界");
+        this.add(stopButton);
+        stopButton.addActionListener(event ->
+                Constants.isStop = true  );
+
     }
     // button 生成器
     public void makeButton(String name, Color bgColor){
