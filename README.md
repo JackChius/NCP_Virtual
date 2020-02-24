@@ -9,5 +9,7 @@
 2.可以方便的暂停程序，重置和恢复整个扩散过程,<br>
 
 3.打包为exe，https://github.com/JackChius/NCP_Virtual/releases/download/beta/NCP_Vr.exe 
+
 <br>
+
 现在可以在自己的电脑上愉快的跑起来~
